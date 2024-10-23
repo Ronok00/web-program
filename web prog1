@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Fibonacci and Squares</title>
+    <script type="text/javascript">
+        function displayFibonacci() {
+            var n = parseInt(prompt("Enter a number to display the first n Fibonacci numbers:"));
+            var fibonacci = [];
+            var a = 0, b = 1, next;
+
+            for (var i = 0; i < n; i++) {
+                fibonacci.push(a);
+                next = a + b;
+                a = b;
+                b = next;
+            }
+
+            alert("The first " + n + " Fibonacci numbers are: " + fibonacci.join(", "));
+        }
+
+        function displaySquares() {
+            var n = parseInt(prompt("Enter a number to display numbers and their squares:"));
+            var result = "Number | Square\n--------------------\n";
+
+            for (var i = 1; i <= n; i++) {
+                result += i + " | " + (i * i) + "\n";
+            }
+
+            alert(result);
+        }
+    </script>
+</head>
+<body>
+    <h1>Fibonacci and Squares</h1>
+    <button onclick="displayFibonacci()">Show Fibonacci</button>
+    <button onclick="displaySquares()">Show Squares</button>
+</body>
+</html>
 
